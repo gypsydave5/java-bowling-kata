@@ -22,8 +22,11 @@ public class BowlingGameTest {
 
     @Test public void
     itScoresTwentyOnGamesOfAllOnes() {
-        for (int i = 0; i < 20; i++) game.roll(1);
+        int iterations = 20;
+        int pins = 1;
+        for (int i = 0; i < iterations; i++) game.roll(pins);
         assertThat(game.score(), is(20));
     }
+
 
 }
