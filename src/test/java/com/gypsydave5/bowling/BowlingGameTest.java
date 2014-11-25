@@ -22,9 +22,7 @@ public class BowlingGameTest {
 
     @Test public void
     itScoresTwentyOnGamesOfAllOnes() {
-        int iterations = 20;
-        int pins = 1;
-        manyRolls(iterations, pins);
+        manyRolls(20, 1);
         assertThat(game.score(), is(20));
     }
 
