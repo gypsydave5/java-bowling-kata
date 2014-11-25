@@ -16,7 +16,7 @@ public class BowlingGameTest {
 
     @Test public void
     itScoresZeroOnGutterGames() {
-        for (int i = 0; i < 20; i++) game.roll(0);
+        manyRolls(20, 0);
         assertThat(game.score(), is(0));
     }
 
@@ -24,8 +24,12 @@ public class BowlingGameTest {
     itScoresTwentyOnGamesOfAllOnes() {
         int iterations = 20;
         int pins = 1;
-        for (int i = 0; i < iterations; i++) game.roll(pins);
+        manyRolls(iterations, pins);
         assertThat(game.score(), is(20));
+    }
+
+    private void manyRolls(int iterations, int pins) {
+        for (int i = 0; i < iterations; i++) game.roll(pins);
     }
 
 
