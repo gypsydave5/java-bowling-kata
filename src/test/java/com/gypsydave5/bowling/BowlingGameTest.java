@@ -30,14 +30,14 @@ public class BowlingGameTest {
         assertThat(game.score(), is(20));
     }
 
-    @Test public void
-    itKnowsHowToScoreOneSpare() {
-        game.roll(5);
-        game.roll(5);
-        game.roll(4);
-        manyRolls(17 ,0);
-        assertThat(game.score(), is(18));
-    }
+//    @Test public void
+//    itKnowsHowToScoreOneSpare() {
+//        game.roll(5);
+//        game.roll(5);
+//        game.roll(4);
+//        manyRolls(17 ,0);
+//        assertThat(game.score(), is(18));
+//    }
 
 }
 
