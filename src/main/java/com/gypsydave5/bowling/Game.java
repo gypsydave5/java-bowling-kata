@@ -14,7 +14,7 @@ public class Game {
 
     public int score() {
         int score = 0;
-        for (int i = 0; i < rolls.length; i++) score += rolls[i];
+        for (int roll : rolls) score += roll;
         return score;
     }
 }
