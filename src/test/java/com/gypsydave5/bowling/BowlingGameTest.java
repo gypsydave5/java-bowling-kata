@@ -9,6 +9,10 @@ public class BowlingGameTest {
 
     Game game;
 
+    private void manyRolls(int iterations, int pins) {
+        for (int i = 0; i < iterations; i++) game.roll(pins);
+    }
+
     @Before public void
     setUpGame() {
         game = new Game();
@@ -26,9 +30,14 @@ public class BowlingGameTest {
         assertThat(game.score(), is(20));
     }
 
-    private void manyRolls(int iterations, int pins) {
-        for (int i = 0; i < iterations; i++) game.roll(pins);
+    @Test public void
+    itKnowsHowToScoreOneSpare() {
+        game.roll(5);
+        game.roll(5);
+        game.roll(4);
+        manyRolls(17 ,0);
+        assertThat(game.score(), is(18));
     }
 
-
 }
+
